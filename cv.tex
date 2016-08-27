@@ -1,0 +1,238 @@
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{enumerate}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\usepackage[document]{ragged2e}
+
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Large Ebby Wiselyn
+	        }\smallskip
+\par}
+
+\begin{flushright}
+  \emph{Chennai, India} \\
+  \emph{+91 9962783740} \\
+  \emph{\href{mailto:ebby.wiselyn@gmail.com}{ebby.wiselyn@gmail.com}} \\
+\end{flushright}
+
+%Section: Education
+\section{Education}
+\begin{itemize}
+
+\item \textsc{2010 2012} \textsc{Uppsala University}, Sweden \\
+\emph{Master Program in Computer Science}\\
+\normalsize \textsc{CGPA}: 4.3/5
+
+\item \textsc{2003 2007} \textsc{Anna University, Karunya Institute}, India \\
+\emph{Bachelor of Engineering in Computer Science}\\
+\normalsize \textsc{CGPA}: 8.1/10
+
+\end{itemize}
+
+%Section: Summary
+\section{Summary}
+  \begin{itemize}
+  \item Over 7 years of professional experience covering JVM environments(\emph{Scala}, \emph{Java}), \emph{Python}, \emph{Erlang}, \emph{C},\emph{GNU/Linux Environment}
+  \item Over 3 years of open source experience in \emph{GNU/Linux}, \emph{GNOME}, \emph{Novell Evolution}
+  \item Ex-Programmer/Maintainer/Contributor for Linux, GNOME Desktop.
+  \item Experience working in successful startups
+  \end{itemize}
+
+%Section: Work Experience
+\section{International Achievements}
+  \begin{itemize}
+  \item \textsc{2007} \emph{Google Summer of Code} grant for developing \emph{Evolution} Google Calendar
+  \item \textsc{2008} \emph{GNOME Foundation Member}, Bug Triager, Maintainer of Google Calendar Backend for Evolution Data Server.
+  \end{itemize}
+    
+%Section: Technical Skills
+\section{Technical Skills}
+  \begin{itemize}
+  \item \textsc{Programming Languages} \\
+    OO languages(Java, Python), C, Functional (Scala, Erlang, Scheme).    
+  \item \textsc{Software Management and Operating Systems} \\
+    Emacs, Eclipse, GNU autotools, git, SVN, Bugzilla, GTK, Glib, GNOME(Platform), GNU/Linux.
+  \item \textsc{Areas of Interest} \\
+    Performance \& Scalability, Concurrency, Advanced Algorithms, Streaming(Data Processing).
+  \end{itemize}
+  
+%Section: Work Experience Profile
+  \section{Work Experience Profile}
+\begin{enumerate}  
+\item \emph{2014/06 – Now,} \textsc{\href{www.scypho.com}{Scypho AB}} \emph {Stockholm} \\
+
+  \begin{itemize}
+    \item \textsc{Description} \\
+      Scypho AB is an IOT startup which provides smart heat control, through a learning thermostat. Responsible for Architecting, Designing and Implementing Scypho's core cloud services from scratch.
+      Also built the real time data streaming platform with realtime and batch dataprocessing.
+   
+  \item \textsc{Environment/Language} \\
+    Scala, Python, Play framework, Amazon EC2, Node.js, Kafka, PostgreSQL
+
+ \end{itemize}
+   
+\item \emph{2012/09} – \emph{2014/05} \textsc{\href{www.king.com}{King AB}} \emph{Stockholm} \\
+  \begin{itemize}
+    \item \textsc{Description} \\
+  
+      King is a social gaming company which produced Candy Crush. Worked in the \emph{core} Platform and data warehousing team. Developed scalable platforms/frameworks for King's games.
+      Also build the first \emph {Lambda Architecture}, for distributed dataprocessing platform for handling traffic over 8 billion events.
+
+     \item \textsc {Environment/Language} \\
+       Java, Kafka, MySQL, memcached, Esper, Apache Spark, Hbase
+
+   \end{itemize}
+  
+\item \textsc{2009/06} – \textsc{2010/06} \href{www.mobilearts.com}{Mobile Arts AB} \emph {Stockholm} \\
+  \begin{itemize}
+    \item \textsc{Description} \\
+  
+  The goal of the \emph{thesis} work was to investigate cost effective implementation of call control parts of a Voice Mail call forwarding service in an existing GSM call service environment. The media and the signalling bearer towards the GSM handset should be RTP and IP respectively. While the VMS side should have TDM and ISUP/SS7 as the media and signalling bearer.
+
+  Implemented the GSM Call control signaling for call forwarding as per 3GPP spec
+
+  \item \textsc{Environment/Language} \\
+  Erlang/OTP, git, 3gpp specs.
+
+   \end{itemize}
+
+\item \textsc{2007/06} – \textsc{2009/06} \href{www.wipro.com}{Wipro Technologies} \emph {India} \\
+  \begin{itemize}
+    \item \textsc{Description} \\
+
+      Unified Communication(UC) is a SDP practice within Wipro to provide a single container unifying all communications.
+      Worked on the product Office In a Box which provides UC with managed LAN, managed security, managed storage.
+
+    \item \textsc{Environment/Language} \\  
+      Java, GNU/Linux, Zimbra Collaboration Suite, RHEL Cluster Suite
+
+  \end{itemize}
+
+\item \textsc{2007/06} – \textsc{2009/06} \href{www.wipro.com}{Wipro Technologies} \emph {India} \\
+
+  \begin{itemize}
+    \item \textsc{Description} \\
+      Developed the Blu-ray middleware stack; for Blu-ray players. BD-J refers to the application programming environment that support Blu-ray systems based on JavaTV specifications. Worked in Multimedia Home Platform; Blu-Ray Java middleware, and Implemented the HAVI Level 2 UI support for BD-J specification.
+
+    \item \textsc{Environment/Language} \\  
+      Java, GNU/Linux, J2ME, HAVI Level 2 UI, Java 2D graphics
+
+   \end{itemize}
+
+\item \textsc{2007/04} - \textsc{2007/08} \href{https://developers.google.com/open-source/gsoc/2007/}{Google Summer Of Code} \\
+  \begin {itemize}
+  \item \textsc{Description} \\
+  Google Summer of Code sponsored by Google is a global program that offers student
+  developers stipends to write code for various open source software projects
+
+  Selected in Google Summer of Code 2007, as part of GNOME organization.
+  Worked on GNOME/Evolution; Implemented Google Calendar backend for evolution data server.Wrote the initial Google Data Services library for GNOME (libgdata)
+
+\item \textsc{Environment/Language} \\
+  GTK+, Glib, GNU/Linux, C, XML  
+  \end {itemize}
+
+\item \textsc{2006/11 - 2007/03} \href{www.novell.com}{Novell} \\
+  \begin {itemize}
+  \item \textsc{Description} \\
+  
+  In house intern in Novell after getting selected through Novell Open Source Internship (NOSIP).
+ 
+  Wrote the print support for Evolution using GTK+ print APIs, Using Cairo library for Image rendering and Pango library for font rendering
+  Worked around calendar, tasks, address book, and mailer component of Novell Evolution
+  Fixed Critical bugs and participated in product releases.
+\item \textsc{Environment/Language} \\
+  GTK+, Glib, C, GNU/Linux, Pango Cairo
+  \end {itemize}
+\end{enumerate}
+
+%Section: Academic Work Experience 
+  \section{Academic Work}
+  \begin{itemize}
+\item \textsc{GSM Call Service} \\
+
+  Implemented GSM call service stack in Erlang/OTP according to existing 3gpp standards. The project
+  was done in collaboration with Mobile Arts, as part of an academic course. Erlang / OTP
+
+\item \textsc{Twimight Android} \\
+  Developed android sensor application for disaster ready twitter android application Twimight. The
+  integration was demoed as part of the ExtremeCom 2011 held in Amazon. Key features were Audio / Speech Classification, Activity Recognition, Integration with Twimight android twitter client, Java, Android. This was a proof of concept for the paper which won the best \href{http://www.tik.ee.ethz.ch/file/ecf9bf3e550dafdd10181f1ca6d08538/extremecom11_twimight.pdf}{paper} in extremecom 2011
+  \end{itemize}
+
+  %Section: Volunteer Work Experience
+  \section {Volunteer Work}
+  \begin {itemize}
+  \item GNOME foundation member [2007/06 – 2009/06] \\
+      Member of the GNOME foundation for doing significant contribution in terms of bug traiging, bug fixing and maintaing modules.
+      
+  \item GNOME Bugzilla [2006 - 2007] \\
+     Active in triaging and fixing bugs having a score of over 13 bugzilla points.      
+  \end {itemize}
+
+\end{document}
